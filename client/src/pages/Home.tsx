@@ -31,15 +31,15 @@ export default function Home() {
 
   // Schedule data
   const schedule = [
-    { date: 'Sat, Jan 10', time: '11:00 AM', opponent: 'Ryan Dotters/Andrew Gordon', homeScore: 38, awayScore: 17, isHome: true, result: 'W' },
-    { date: 'Fri, Jan 16', time: '5:00 PM', opponent: 'Matthew Tanner/Jim Murphy', homeScore: 33, awayScore: 32, isHome: false, result: 'L' },
-    { date: 'Fri, Jan 23', time: '5:00 PM', opponent: 'Steve Ludwig/Brett Feuerstein', homeScore: 24, awayScore: 34, isHome: false, result: 'W' },
-    { date: 'Wed, Jan 28', time: '4:30 PM', opponent: 'Derek Belch', homeScore: 39, awayScore: 24, isHome: true, result: 'W' },
-    { date: 'Fri, Feb 6', time: '4:00 PM', opponent: 'Tim Lewis/Tristan Poh', homeScore: 46, awayScore: 26, isHome: true, result: 'W' },
-    { date: 'Wed, Feb 11', time: '4:30 PM', opponent: 'Ryan Dotters/Andrew Gordon', homeScore: 25, awayScore: 23, isHome: false, result: 'L' },
-    { date: 'Wed, Feb 18', time: '4:30 PM', opponent: 'Matthew Tanner/Jim Murphy', homeScore: 27, awayScore: 40, isHome: true, result: 'L' },
-    { date: 'Wed, Mar 4', time: '5:30 PM', opponent: 'Tim Lewis/Tristan Poh', homeScore: 40, awayScore: 20, isHome: true, result: 'W', type: 'Playoffs' },
-    { date: 'Sat, Mar 7', time: '12:00 PM', opponent: 'Ryan Dotters/Andrew Gordon', homeScore: 28, awayScore: 31, isHome: false, result: 'W', type: 'Playoffs' },
+    { date: 'Sat, Jan 10', time: '11:00 AM', opponent: 'Ryan Dotters/Andrew Gordon', homeScore: 38, awayScore: 17, isHome: true, result: 'W', court: 'Court 1 (North)' },
+    { date: 'Fri, Jan 16', time: '5:00 PM', opponent: 'Matthew Tanner/Jim Murphy', homeScore: 33, awayScore: 32, isHome: false, result: 'L', court: 'Court 1 (North)' },
+    { date: 'Fri, Jan 23', time: '5:00 PM', opponent: 'Steve Ludwig/Brett Feuerstein', homeScore: 24, awayScore: 34, isHome: false, result: 'W', court: 'Court 1 (North)' },
+    { date: 'Wed, Jan 28', time: '4:30 PM', opponent: 'Derek Belch', homeScore: 39, awayScore: 24, isHome: true, result: 'W', court: 'West Court' },
+    { date: 'Fri, Feb 6', time: '4:00 PM', opponent: 'Tim Lewis/Tristan Poh', homeScore: 46, awayScore: 26, isHome: true, result: 'W', court: 'Court 1 (North)' },
+    { date: 'Wed, Feb 11', time: '4:30 PM', opponent: 'Ryan Dotters/Andrew Gordon', homeScore: 25, awayScore: 23, isHome: false, result: 'L', court: 'West Court' },
+    { date: 'Wed, Feb 18', time: '4:30 PM', opponent: 'Matthew Tanner/Jim Murphy', homeScore: 27, awayScore: 40, isHome: true, result: 'L', court: 'West Court' },
+    { date: 'Wed, Mar 4', time: '5:30 PM', opponent: 'Tim Lewis/Tristan Poh', homeScore: 40, awayScore: 20, isHome: true, result: 'W', type: 'Playoffs', court: 'West Court' },
+    { date: 'Sat, Mar 7', time: '12:00 PM', opponent: 'Ryan Dotters/Andrew Gordon', homeScore: 28, awayScore: 31, isHome: false, result: 'W', type: 'Playoffs', court: 'Court 2 (South)' },
   ];
 
   // Standings data
@@ -195,6 +195,7 @@ export default function Home() {
                         </div>
                         <p className="font-semibold text-foreground">{game.opponent}</p>
                         <p className="text-sm text-muted-foreground">{game.date} at {game.time}</p>
+                        <p className="text-xs text-accent font-semibold mt-1">{game.court}</p>
                       </div>
                       <div className="text-right">
                         <div className="flex items-center gap-2">
