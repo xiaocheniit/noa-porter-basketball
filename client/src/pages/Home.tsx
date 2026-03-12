@@ -116,7 +116,7 @@ export default function Home() {
 
             <div className="relative min-h-96 md:min-h-full hidden md:block">
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663430570794/AbBKuvHZk8eVm2TiCvWcVU/basketball-action-shot-CeTKNJZcNidv92uSUEoELt.webp" 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663430570794/AbBKuvHZk8eVm2TiCvWcVU/youth-player-hero-hUbaz7ieaC8kt2iy7BPajH.webp" 
                 alt="Youth basketball player" 
                 className="rounded-2xl shadow-2xl w-full h-full object-cover"
               />
