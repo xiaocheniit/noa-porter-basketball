@@ -119,7 +119,7 @@ export default function Home() {
               </Button>
             </div>
             <div className="hidden md:block">
-              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663430570794/AbBKuvHZk8eVm2TiCvWcVU/basketball-action-shot-CeTKNJZcNidv92uSUEoELt.webp" alt="Basketball action" className="rounded-xl shadow-2xl" />
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663430570794/AbBKuvHZk8eVm2TiCvWcVU/youth-basketball-player-NLpxMmghDBU3uSsxvWjP3p.webp" alt="Youth basketball player" className="rounded-xl shadow-2xl" />
             </div>
           </div>
         </div>
