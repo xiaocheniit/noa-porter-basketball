@@ -182,7 +182,7 @@ export default function Home() {
                 <h2 className="text-2xl font-bold text-primary">Game Schedule</h2>
                 <span className="text-sm text-muted-foreground">{schedule.length} games</span>
               </div>
-              <div className="space-y-3">
+              <div className="overflow-y-auto max-h-96 space-y-3 pr-2 scrollbar-thin scrollbar-thumb-accent scrollbar-track-secondary/30 border border-border rounded-lg p-4 bg-card">
                 {schedule.map((game, idx) => (
                   <Card key={idx} className="p-4 hover:shadow-md transition-shadow cursor-pointer border-l-4 border-l-accent">
                     <div className="flex items-center justify-between">
