@@ -227,34 +227,6 @@ export default function Home() {
           </Card>
         </section>
 
-        {/* Team Roster Section */}
-        <section id="roster">
-          <div className="mb-8">
-            <h2 className="text-4xl font-bold text-primary mb-2" style={{ fontFamily: 'Montserrat' }}>
-              <Users className="inline-block mr-3 text-accent" size={32} />
-              Team Roster
-            </h2>
-            <p className="text-muted-foreground">Meet the Noa Porter team</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {roster.map((player, idx) => (
-              <Card key={idx} className="p-6 hover:shadow-lg transition-shadow border-t-4 border-t-accent">
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-2xl">#{player.number}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground mb-1">{player.name}</h3>
-                  <p className="text-sm text-accent font-semibold mb-4">{player.position}</p>
-                  <Button variant="outline" className="w-full" size="sm">
-                    View Stats
-                  </Button>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </section>
-
         {/* Game Videos Section */}
         <section id="videos">
           <div className="mb-8">
@@ -291,6 +263,34 @@ export default function Home() {
                   ) : (
                     <p className="text-sm text-muted-foreground text-center py-2">Video coming soon</p>
                   )}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Team Roster Section */}
+        <section id="roster">
+          <div className="mb-8">
+            <h2 className="text-4xl font-bold text-primary mb-2" style={{ fontFamily: 'Montserrat' }}>
+              <Users className="inline-block mr-3 text-accent" size={32} />
+              Team Roster
+            </h2>
+            <p className="text-muted-foreground">Meet the Noa Porter team</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {roster.map((player, idx) => (
+              <Card key={idx} className="p-6 hover:shadow-lg transition-shadow border-t-4 border-t-accent">
+                <div className="text-center">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-2xl">#{player.number}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-1">{player.name}</h3>
+                  <p className="text-sm text-accent font-semibold mb-4">{player.position}</p>
+                  <Button variant="outline" className="w-full" size="sm">
+                    View Stats
+                  </Button>
                 </div>
               </Card>
             ))}
