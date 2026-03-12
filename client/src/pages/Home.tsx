@@ -82,12 +82,12 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-visible bg-gradient-to-r from-primary via-primary to-primary/90 text-white py-16 md:py-24">
+      <section className="relative bg-gradient-to-r from-primary via-primary to-primary/90 text-white py-16 md:py-32">
         <div className="absolute inset-0 opacity-10">
           <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663430570794/AbBKuvHZk8eVm2TiCvWcVU/basketball-pattern-RpXwyBjW7pxfW6VgU8kEi3.webp" alt="" className="w-full h-full object-cover" />
         </div>
         <div className="container relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-stretch">
             <div>
               <h2 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Montserrat' }}>
                 {teamData.name}
@@ -114,9 +114,9 @@ export default function Home() {
               </Button>
             </div>
 
-            <div className="relative h-96 md:h-full flex items-center justify-center">
+            <div className="relative min-h-96 md:min-h-full hidden md:block">
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663430570794/AbBKuvHZk8eVm2TiCvWcVU/youth-basketball-player-KqPvGHhMdEYqZvMZxWqUMa.webp" 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663430570794/AbBKuvHZk8eVm2TiCvWcVU/basketball-action-shot-CeTKNJZcNidv92uSUEoELt.webp" 
                 alt="Youth basketball player" 
                 className="rounded-2xl shadow-2xl w-full h-full object-cover"
               />
