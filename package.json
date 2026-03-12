@@ -1,5 +1,6 @@
 {
   "name": "noa-porter-basketball",
+  "homepage": "http://xiaocheniit.github.io/noa-porter-basketball",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
@@ -8,6 +9,8 @@
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist",
     "check": "tsc --noEmit",
     "format": "prettier --write ."
   },
@@ -46,6 +49,7 @@
     "embla-carousel-react": "^8.6.0",
     "express": "^4.21.2",
     "framer-motion": "^12.23.22",
+    "gh-pages": "^6.3.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.453.0",
     "nanoid": "^5.1.5",
