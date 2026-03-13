@@ -154,7 +154,6 @@ const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(
 
 export default defineConfig({
   plugins,
-  base:"/noa-porter-basketball",
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
