@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { ChevronRight, Trophy, Calendar, Users, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -12,6 +11,7 @@ import { Card } from '@/components/ui/card';
  */
 
 export default function Home() {
+
   // Team data
   const teamData = {
     name: 'Noa Porter',
