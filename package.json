@@ -1,4 +1,5 @@
 {
+  "homepage": "http://xiaocheniit.github.io/noa-porter-basketball",
   "name": "noa-porter-basketball",
   "version": "1.0.0",
   "type": "module",
@@ -7,6 +8,8 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview --host",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist",
     "check": "tsc --noEmit",
     "format": "prettier --write ."
   },
