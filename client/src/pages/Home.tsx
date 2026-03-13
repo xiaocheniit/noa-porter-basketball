@@ -58,10 +58,10 @@ export default function Home() {
     { number: 14, name: 'Player Name', position: 'Forward' },
   ];
 
-  // Game videos (placeholder - user will provide)
+  // Game videos - Add YouTube video IDs here
   const videos = [
-    { date: 'Mar 7, 2026', opponent: 'Ryan Dotters/Andrew Gordon', videoUrl: '', thumbnail: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663430570794/AbBKuvHZk8eVm2TiCvWcVU/basketball-action-shot-CeTKNJZcNidv92uSUEoELt.webp' },
-    { date: 'Mar 4, 2026', opponent: 'Tim Lewis/Tristan Poh', videoUrl: '', thumbnail: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663430570794/AbBKuvHZk8eVm2TiCvWcVU/team-celebration-Ma7Fcm93dQZSehrvjEAoHQ.webp' },
+    { date: 'Mar 7, 2026', opponent: 'Ryan Dotters/Andrew Gordon', youtubeId: '', thumbnail: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663430570794/AbBKuvHZk8eVm2TiCvWcVU/basketball-action-shot-CeTKNJZcNidv92uSUEoELt.webp' },
+    { date: 'Mar 4, 2026', opponent: 'Tim Lewis/Tristan Poh', youtubeId: '', thumbnail: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663430570794/AbBKuvHZk8eVm2TiCvWcVU/team-celebration-Ma7Fcm93dQZSehrvjEAoHQ.webp' },
   ];
 
   return (
@@ -255,11 +255,16 @@ export default function Home() {
                 <div className="p-6">
                   <p className="text-sm text-muted-foreground mb-2">{video.date}</p>
                   <h3 className="text-lg font-bold text-foreground mb-4">vs {video.opponent}</h3>
-                  {video.videoUrl ? (
-                    <Button className="w-full bg-accent hover:bg-accent/90 text-white gap-2">
+                  {video.youtubeId ? (
+                    <a 
+                      href={`https://www.youtube.com/watch?v=${video.youtubeId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center bg-accent hover:bg-accent/90 text-white gap-2 px-4 py-2 rounded-md transition-colors"
+                    >
                       <Play size={18} />
-                      Watch Video
-                    </Button>
+                      Watch on YouTube
+                    </a>
                   ) : (
                     <p className="text-sm text-muted-foreground text-center py-2">Video coming soon</p>
                   )}
